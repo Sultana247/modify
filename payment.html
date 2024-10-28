@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Optional Bootstrap JS for additional functionality -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="paycss/styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-md-2 bg-dark text-light sidebar p-4">
+                <div class="logo text-center mb-4">
+        <h2>KLOZER.<span>io</span><i class="fa fa-bell" aria-hidden="true"></i></h2>
+                </div>
+
+
+                
+               
+  <nav>
+<ul class="nav flex-column">
+   <li class="nav-item">
+    <a href="dashboard.html" class="nav-link text-light">
+    <i class="fa fa-home" aria-hidden="true"></i>Dashboard
+   </a>
+  </li>
+<li class="nav-item">
+  <a href="cdr.html" class="nav-link text-light">
+ <i class="fa fa-list-ul" aria-hidden="true"></i></i>CDR
+ </a>
+ </li>
+<li class="nav-item">
+<a href="authentication.html" class="nav-link text-light">
+    <i class="fa fa-lock" aria-hidden="true"></i>Authentication
+        </a>
+ </li>
+<li class="nav-item">
+ <a href="dld.html" class="nav-link text-light">
+<i class="fa fa-share" aria-hidden="true"></i></i>DID
+ </a>
+ </li>
+<li class="nav-item">
+ <a href="invoice.html" class="nav-link text-light">
+ <i class="fa fa-volume-control-phone" aria-hidden="true"></i>Invoice
+ </a>
+ </li>
+<li class="nav-item">
+    <a href="cli.html" class="nav-link text-light">
+    <i class="fa fa-clipboard" aria-hidden="true"></i>CLI
+    </a></li>
+
+<li class="nav-item">
+<a href="latestcall.html" class="nav-link text-light">
+<i class="fa fa-address-card" aria-hidden="true"></i>Latest Calls
+        </a>
+ </li>
+
+    <li class="nav-item">
+    <a href="user.html" class="nav-link text-light">
+ <i class="fa fa-users" aria-hidden="true"></i>User Registration
+    </a></li>
+
+<div class="dropdown">
+  <a class="btn btn-secondary dropdown-toggle" href="setpage.html" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+<i class="fa fa-plug" aria-hidden="true"></i>Setup
+  </a>
+ <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li><a class="dropdown-item" href="connect.html"><i class="fa fa-gavel" aria-hidden="true"></i>Contract</a></li>
+    <li><a class="dropdown-item" href="document.html"><i class="fa fa-file-text" aria-hidden="true"></i>Document</a></li>
+  </ul>
+</li>
+
+   <li class="nav-item">
+    <a href="payment.html" class="nav-link text-light">
+<i class="fa fa-credit-card-alt" aria-hidden="true"></i>Payment</a></li>
+   <li class="nav-item">
+    <a href="package.html" class="nav-link text-light">
+<i class="fa fa-gift" aria-hidden="true"></i>Package</a></li>
+   <li class="nav-item">
+    <a href="route.html" class="nav-link text-light">
+<i class="fa fa-signal" aria-hidden="true"></i>Routes</a></li>
+
+   <li class="nav-item">
+    <a href="interconnect.html" class="nav-link text-light">
+<i class="fa fa-cogs" aria-hidden="true"></i>Interconnect</a></li>
+                  </ul>
+                </nav>
+
+            </aside>
+
+            <main class="col-md-10">
+
+    <header class="d-flex justify-content-between align-items-center bg-secondary p-3 text-light">
+
+    <div class="balance">Balance: -$93.71 USD</div>
+     <div class="office">Klozer Office</div>
+     <div id="real-time" class="time">Sat, 09:15:24</div> <!-- This will be updated with real-time -->
+     <div class="notifications position-relative">
+       
+     
+   </div>
+</header>
+
+
+<section class="payment-section mt-4">
+<div class="d-flex justify-content-between align-items-center">
+
+ <div class="p-title">
+<h1>Account Status</h1>
+<p>The current account status is <span>Active</span></p>
+</div>
+           
+<h3> Customer Payment Method</h3>
+
+<button class="btn btn-success">Add Payment Method</button>
+
+    </div>
+    <table class="table mt-3 table-bordered table-striped">
+ <thead class="table-light">
+<tr>
+<th>Customer Name</th>
+ <th>Account</th>
+ <th>Type</th>
+ <th>Select Event</th>
+  </tr>
+ </thead>
+ <tbody>
+ <tr>
+  <td>Meem</td>
+ <td>******123/2024</td>
+ <td>VISA</td>
+<td class="status text-success">Completed</td>
+  </tr>
+ <tr>
+ <td>Zafrin</td>
+ <td>******193/2024</td>
+<td>Mastercard</td>
+<td class="status text-success">Completed</td>
+ </tr>
+                          
+ </tbody>
+ </table>
+</section>
+
+<section class="payment-section mt-4">
+
+
+<div class="d-flex justify-content-between align-items-center">
+       <h3>Payment</h3>
+
+   <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paymentModal">
+  Make Payment
+ </button>
+ </div>
+
+
+  <table class="table mt-3 table-bordered table-striped">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Date / Time</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>May 30, 2024 5:59 AM</td>
+                                <td>-$2.00 USD</td>
+                                <td class="status text-success">Completed</td>
+                                <td>USA DID(13417325387)</td>
+                            </tr>
+                            <tr>
+                                <td>May 30, 2024 5:59 AM</td>
+                                <td>-$2.00 USD</td>
+                                <td class="status text-success">Completed</td>
+                                <td>USA DID(16573905001)</td>
+                            </tr>
+                            <tr>
+                                <td>Apr 30, 2024 5:59 AM</td>
+                                <td>-$2.00 USD</td>
+                                <td class="status text-success">Completed</td>
+                                <td>USA DID(13417325387)</td>
+                            </tr>
+                            <tr>
+                                <td>Apr 30, 2024 5:59 AM</td>
+                                <td>-$2.00 USD</td>
+                                <td class="status text-success">Completed</td>
+                                <td>USA DID(16573905001)</td>
+                            </tr>
+                            <tr>
+                                <td>Oct 19, 2022 6:53 PM</td>
+                                <td>$0.99 USD</td>
+                                <td class="status text-success">Completed</td>
+                                <td>Credit Card Payment</td>
+                            </tr>
+                            <tr>
+                                <td>Jul 11, 2021 3:05 PM</td>
+                                <td>$20.00 USD</td>
+                                <td class="status text-success">Completed</td>
+                                <td>Office Payment</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+
+   <!-- Payment Modal -->
+<div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="paymentModalLabel">Payment</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+  <!-- Modal form option -->
+<form>
+<div class="mb-3">
+<label for="payVia" class="form-label">Pay via</label>
+<select id="payVia" class="form-select" required>
+ <option selected disabled>Select</option>
+        <option value="visa">Visa</option>
+         <option value="mastercard">Mastercard</option>
+           <option value="paypal">PayPal</option>
+            </select>
+              </div>
+      <div class="mb-3">
+        <label for="amount" class="form-label">Amount</label>
+                                        <input type="number" class="form-control" id="amount" value="0" required>
+                                    </div>
+                                    <div class="mb-3">
+<label for="currency" class="form-label">Currency</label>
+<select id="currency" class="form-select" required>
+                        <option selected disabled>Select</option>
+              <option value="USD">USD</option>
+<option value="EUR">EUR</option>
+ <option value="GBP">GBP</option>
+</select>
+</div>
+                                </form>
+                            </div>
+       <div class="modal-footer">
+<button type="button" class="btn btn-success secondary" data-bs-dismiss="modal">Pay</button>
+
+<button type="button" class="btn btn-danger danger" data-bs-dismiss="modal">Cancel</button>
+         </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </main>
+        </div>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to format the date and time
+    function formatDateTime() {
+        const now = new Date();
+        const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        const day = dayNames[now.getDay()];
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        const timeString = ${day}, ${hours}:${minutes}:${seconds};
+        return timeString;
+    }
+
+    // Function to update the time every second
+    function updateTime() {
+        const timeElement = document.getElementById("real-time");
+        timeElement.textContent = formatDateTime();
+    }
+
+    // Call the updateTime function every second
+    setInterval(updateTime, 1000);
+    
+    // Set initial time on page load
+    updateTime();
+});
+</script>
+</body>
+</html>
